@@ -1,0 +1,53 @@
+
+POST http://127.0.0.1:8000/analyze
+Content-Type: application/json
+
+{
+  "RequestHeaderLogField": "request-headers",
+  "UserIdLogField": "user",
+  "EventTypeLogField": "event-type",
+  "EventDateLogField": "event-date",
+  "RemoteAddressLogField": "remote-address",
+  "SqlInjectionCheck": {
+    "Run": true
+  },
+  "ExcessiveEventCheck": {
+    "Run": true,
+    "Threshold": 500
+  },
+  "CrossFrameScriptingCheck": {
+    "Run": true
+  },
+  "LDAPInjectionCheck": {
+    "Run": true
+  },
+  "ExcessiveLoginCheck": {
+    "Run": true,
+    "Threshold": 15,
+    "EventTypeValue": "USER LOGIN"
+  },
+  "ExcessivePasswordChangeCheck": {
+    "Run": true,
+    "Threshold": 15,
+    "EventTypeValue": "PASSWORD CHANGE"
+  },
+  "LoginAfterHoursCheck": {
+    "Run": true,
+    "Timestart": "6:00 AM",
+    "Timeend": "6:00 PM",
+    "EventTypeValue": "USER LOGIN"
+  },
+  "ReportWebInspect": true,
+  "ReportNessus": true,
+  "ReportCrossFeed": true,
+  "Logs": [
+    {
+      "id": 1,
+      "request-headers": "abc122",
+      "user": "system",
+      "event-type": "SYSTEM START UP",
+      "event-date": "1/1/2022 8:32:00 AM",
+      "remote-address": "192.168.1.1"
+    }
+  ]
+}

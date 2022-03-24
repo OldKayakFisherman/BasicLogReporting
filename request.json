@@ -1,0 +1,80 @@
+{
+  "request-header-log-field": "request-headers",
+  "user-id-log-field": "user",
+  "event-type-log-field": "event-type",
+  "event-date-log-field": "event-date",
+  "remote-address-log-field": "remote-address",
+  "checks": {
+    "sql-injection": {
+      "run-check": true,
+      "threshold": null,
+      "check-time-start": null,
+      "check-time-end": null,
+      "event-type-value": null
+    },
+    "script-injection": {
+      "run-check": true,
+      "threshold": null,
+      "check-time-start": null,
+      "check-time-end": null,
+      "event-type-value": null
+    },
+    "excessive-events": {
+      "run-check": true,
+      "threshold": 500,
+      "check-time-start": null,
+      "check-time-end": null,
+      "event-type-value": null
+    },
+     "cross-frame-scripting": {
+      "run-check": true,
+      "threshold": null,
+      "check-time-start": null,
+      "check-time-end": null,
+       "event-type-value": null
+    },
+     "ldap-injection": {
+      "run-check": true,
+      "threshold": null,
+       "check-time-start": null,
+      "check-time-end": null,
+       "event-type-value": null
+    },
+     "excessive-logins": {
+      "run-check": true,
+      "threshold": 15,
+      "check-time-start": null,
+      "check-time-end": null,
+       "event-type-value": "USER LOGIN"
+    },
+    "excessive-password-changes": {
+      "run-check": true,
+      "threshold": 15,
+      "check-time-start": null,
+      "check-time-end": null,
+      "event-type-value": "PASSWORD CHANGE"
+    },
+    "login-after-hours": {
+      "run-check": true,
+      "threshold": null,
+      "check-time-start": "6:00 AM",
+      "check-time-end": "6:00 PM",
+      "event-type-value": "USER LOGIN"
+    }
+  },
+  "scan-tools": {
+    "report-web-inspect": true,
+    "report-nessus": true,
+    "report-crossfeed": true
+  },
+  "logs": [
+    {
+      "user":  "123",
+      "request-headers": "khkjhkjhkjhj",
+      "event-type": "fdsfsdfsdfsd",
+      "event-date": "1/1/2013 3:45:00:01",
+      "remote-address": "192.168.1.1"
+    }
+  ]
+
+}
