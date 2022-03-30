@@ -3,6 +3,7 @@ from app.models import AnalyzerConfiguration
 from app.db import create_db_and_tables
 from app.models import UserDB
 from app.users import auth_backend, current_active_user, fastapi_users
+from services import  ImportValidatorService
 
 app = FastAPI()
 
@@ -29,6 +30,7 @@ async def root():
 
 @app.post("/analyze")
 async def analyze(conf: AnalyzerConfiguration):
+    validation_response = ImportValidatorService().validateImport(conf)
     return {"message": "Ok"}
 
 

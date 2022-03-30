@@ -1,4 +1,6 @@
 
+//See - https://fastapi-users.github.io/fastapi-users/usage/flow/
+
 POST http://127.0.0.1:8000/analyze
 Content-Type: application/json
 

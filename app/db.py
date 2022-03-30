@@ -7,7 +7,7 @@ from sqlalchemy.ext.declarative import DeclarativeMeta, declarative_base
 from sqlalchemy.orm import sessionmaker
 from app.models import UserDB
 
-DATABASE_URL = "sqlite+aiosqlite:///app.db"
+DATABASE_URL = "sqlite+aiosqlite:///./app.db"
 Base: DeclarativeMeta = declarative_base()
 
 

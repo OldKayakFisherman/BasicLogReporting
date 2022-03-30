@@ -3,6 +3,13 @@ from pydantic import BaseModel
 from fastapi_users import models
 
 
+class ConfigurationValidationResponse(models.BaseModel):
+    IsValid: bool
+    Messages: list[str]
+
+    def __init__(self):
+        Messages = list[str]()
+
 class User(models.BaseUser):
     pass
 
