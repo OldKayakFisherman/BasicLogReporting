@@ -1,4 +1,4 @@
-
+from models import AnalyzerConfiguration
 
 def check_sql_injection(self):
     pass
